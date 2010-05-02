@@ -2,8 +2,8 @@
 
 The folder structure of your library/project is expected as follows:
 
-  |
-  |- lib (for your libs code)
+  |  
+  |- lib (for your libs code)  
   |- spec (for your tests)
 
 Use the following lines to get your specs running:
