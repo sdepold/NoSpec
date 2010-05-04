@@ -1,3 +1,7 @@
+it("should work", function() {
+  expect(1).toEqual(1)
+})
+
 describe("comparison methods", function() {
   it("should do smth with toEqual", function () {
     expect("a").toEqual("a") // will be true
@@ -36,5 +40,28 @@ describe("comparison methods", function() {
     expect(nulled).toBeDefined() // will be false
     expect(text).toBeDefined() // will be true
     expect(hash.bar).toBeDefined() // will be false
+  })
+  
+  it("should do smth with toHave", function() {
+    var myClass = function(){}
+    var obj = new myClass()
+    obj.sub = [1,2]
+    expect(obj).toHave(2, "sub") // will be true
+    expect(obj).toHave(1, "sub") // will be false
+    expect(obj).toHave(1, "foo") // will be false
+    expect(obj).toHave("sub") // will be true
+    expect(obj).toHave("foo") // will be false
+  })
+})
+
+describe("smth", function() {
+  beforeEach(function() {
+    var hash = {a: 1}
+    var foo = "a"
+  })
+  
+  it("should correctly use before", function() {
+    expect(hash).toMatch({a: 1})
+    expect(foo).toEqual("a")
   })
 })
