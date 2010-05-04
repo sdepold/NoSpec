@@ -1,3 +1,9 @@
+# Installation #
+
+I recommend to install NoSpec via the node.js package manager kiwi (http://kiwijs.com/):
+
+    kiwi install NoSpec
+
 # Usage #
 
 The folder structure of your library/project is expected as follows:
@@ -42,7 +48,12 @@ And a spec file looks like that:
 OK, now that you know how to specify tests (the _it_ call) and test suites (the _describe_ call) let's check out the assertion methods:
 
     describe("smth", function() {
-      it("should do smth", function () {
-        expect("a").toEqual("a")
+      it("should do smth with toEqual", function () {
+        expect("a").toEqual("a") // will be true
+        expect("a").toEqual("b") // will be false
+        
+        var hash = {a: 1}
+        expect(hash).toEqual(hash) // will be true
+        expect(hash).toEqual({a: 1}) // will be false
       })
     })
