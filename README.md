@@ -99,7 +99,7 @@ OK, now that you know how to specify tests (the _it_ call) and test suites (the 
       })
     })
 
-# before / after # 
+# before / after
 Let's say you want to call methods of an object without editing the object. In order to minimize your code inside the tests you can use the before and after methods:
 
     describe("before", function() {
