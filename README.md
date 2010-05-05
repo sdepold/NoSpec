@@ -19,8 +19,8 @@ Use the following lines to setup your specs:
     kiwi.require("NoSpec")
 
     new NoSpec()
-      .load(__dirname + "/specFile.js")
-      .load(__dirname + "/anotherSpecFile.js")
+      .load(__dirname + "/specFile")
+      .load(__dirname + "/anotherSpecFile")
       .run()
 
 And a spec file looks like that:
