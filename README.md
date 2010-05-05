@@ -109,13 +109,13 @@ Let's say you want to call methods of an object without editing the object. In o
       })
 
       it("should correctly use before", function() {
-        expect(hash).toMatch({a: 1})
+        expect(hash).toMatch({a: 1}) // will be true
         hash.a = 2
-        expect(hash).toMatch({a: 2})
+        expect(hash).toMatch({a: 2}) // will be true
       })
 
       it("should have a new hash instance", function() {
-        expect(hash).toMatch({a: 1})
+        expect(hash).toMatch({a: 1}) // will be true
       })
     })
 
