@@ -86,4 +86,49 @@ OK, now that you know how to specify tests (the _it_ call) and test suites (the 
         expect(text).toBeDefined() // will be true
         expect(hash.bar).toBeDefined() // will be false
       })
+
+      it("should do smth with toHave", function() {
+        var myClass = function(){}
+        var obj = new myClass()
+        obj.sub = [1,2]
+        expect(obj).toHave(2, "sub") // will be true
+        expect(obj).toHave(1, "sub") // will be false
+        expect(obj).toHave(1, "foo") // will be false
+        expect(obj).toHave("sub") // will be true
+        expect(obj).toHave("foo") // will be false
+      })
+    })
+
+# before / after # 
+Let's say you want to call methods of an object without editing the object. In order to minimize your code inside the tests you can use the before and after methods:
+
+    describe("before", function() {
+      before(function() {
+        var hash = {a: 1}
+        var foo = "a"
+      })
+
+      it("should correctly use before", function() {
+        expect(hash).toMatch({a: 1})
+        hash.a = 2
+        expect(hash).toMatch({a: 2})
+      })
+
+      it("should have a new hash instance", function() {
+        expect(hash).toMatch({a: 1})
+      })
+    })
+
+    describe("after", function() {
+      after(function() {
+        expect(toBeTested).toEqual(1)
+      })
+
+      it("should succeed", function() {
+        var toBeTested = 1 // will be true in the after filter
+      })
+
+      it("should fail", function() {
+        var toBeTested = 2 // will fail in the after filter
+      })
     })

@@ -54,14 +54,33 @@ describe("comparison methods", function() {
   })
 })
 
-describe("smth", function() {
-  beforeEach(function() {
+describe("before", function() {
+  before(function() {
     var hash = {a: 1}
     var foo = "a"
   })
   
   it("should correctly use before", function() {
     expect(hash).toMatch({a: 1})
-    expect(foo).toEqual("a")
+    hash.a = 2
+    expect(hash).toMatch({a: 2})
+  })
+  
+  it("should have a new hash instance", function() {
+    expect(hash).toMatch({a: 1})
+  })
+})
+
+describe("after", function() {
+  after(function() {
+    expect(toBeTested).toEqual(1)
+  })
+  
+  it("should succeed", function() {
+    var toBeTested = 1 // will be true in the after filter
+  })
+  
+  it("should fail", function() {
+    var toBeTested = 2 // will fail in the after filter
   })
 })
