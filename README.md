@@ -21,6 +21,7 @@ Use the following lines to setup your specs:
     new NoSpec()
       .load(__dirname + "/specFile")
       .load(__dirname + "/anotherSpecFile")
+      .load(__dirname + "/specFolder") <--- use this to load all files in a folder and its subfolders
       .run()
 
 And a spec file looks like that:
