@@ -1,5 +1,5 @@
 require(__dirname + "/../lib/nospec")
 
 new NoSpec()
-  .load(__dirname + "/test")
+  .load(__dirname + "/specs")
   .run()
