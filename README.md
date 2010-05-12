@@ -56,11 +56,11 @@ Let's say you have the following folder structure:
           |- spec1.js  
           |- spec2.js
 
-To start the spec, just run:
+To start the specs, just run:
 
     node spec/spec_starter.js
 
-NoSpecs is also able to listen for changes in your specs. If started in the so-called 'AutoSpec'-mode, a change will cause NoSpec to re-run all specs. To activate this mode, just run your specs with:
+NoSpec is also able to listen for changes in your specs. If started in the so-called 'AutoSpec'-mode, a change will cause NoSpec to re-run all specs. To activate this mode, just use:
 
     node spec/spec_starter.js -a  
     # or  
