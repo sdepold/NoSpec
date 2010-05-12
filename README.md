@@ -43,6 +43,28 @@ And a spec file looks like that:
         })
       })
     })
+
+# Start and automatical re-run of specs
+
+Let's say you have the following folder structure:
+
+    |  
+    |- lib (for your libs code)  
+    |- spec (for your tests)  
+       |- spec_starter.js  
+       |- specs  
+          |- spec1.js  
+          |- spec2.js
+
+To start the spec, just run:
+
+    node spec/spec_starter.js
+
+NoSpecs is also able to listen for changes in your specs. If started in the so-called 'AutoSpec'-mode, a change will cause NoSpec to re-run all specs. To activate this mode, just run your specs with:
+
+    node spec/spec_starter.js -a  
+    # or  
+    node spec/spec_starter.js --autoSpec
     
 # Assertions #
 
