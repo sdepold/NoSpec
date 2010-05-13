@@ -68,7 +68,7 @@ NoSpec is also able to listen for changes in your specs or in your defined libra
     
 # Accessing your library
 
-NoSpec provides the _define_ method, which allows you to access your library and NoSpec to watch your lib for changes (AutoSpec). Here is an example (according to the folder structured explained earlier):
+NoSpec provides the _define_ method, which allows you to access your library and NoSpec to watch your lib for changes (AutoSpec). Here is an example (according to the folder structure explained earlier):
 
     <lib/myLib.js>  
     exports.MyLib = function(name){  
