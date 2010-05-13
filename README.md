@@ -86,7 +86,7 @@ This is our nice library, which provides an awesome _sayHello_ function. Woot!
     kiwi.require("NoSpec")
 
     new NoSpec()  
-      __.define("myLib", __dirname + "/../lib/myLib", "MyLib")__  
+      .define("myLib", __dirname + "/../lib/myLib", "MyLib")  
       .load(__dirname + "/myLibSpec")  
       .run()  
 
